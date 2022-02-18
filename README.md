@@ -23,7 +23,8 @@ To deploy this tool, you need to setup a firebase project.
 1. Create a new firebase project via the firebase console
 2. Enable `firestore` and `functions`
 3. Upgrade to the `Blaze` plan (this tool should not cost more than a few cents per month)
-4. Install firebase cli `npm i -g firebase-tools`
-5. Configure firebase cli by updating the project id inside the `.firebaserc` file so it matches the ID of the project you created above
-6. Deploy firebase function config by running `./functions/set-config.js`
-7. Deploy app by running `firebase deploy` from the root directory
+4. INstall global dependencies by running `npm i` in the root folder
+5. Install project dependencies by running `npm i` inside the `./functions` folder
+6. Configure firebase cli by updating the project id inside the `.firebaserc` file so it matches the ID of the project you created above
+7. Deploy firebase function config by running `./functions/set-config.js` (requires node v16)
+8. Deploy app by running `npx firebase deploy` from the root directory
